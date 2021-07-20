@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Spartan";
+  box-sizing: border-box;
+  background-color: hsl(240, 67%, 8%);
+  background-image: url("../assets/background-stars.svg"); //starry background
+  background-position: center;
+  background-repeat: repeat;
+}
+
+nav > ul {
+  //background: red;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  li {
+    text-decoration: none;
+    list-style: none;
+    float: right;
+    line-height: 99px;
+    color: rgb(228, 228, 228);
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    padding: 0 12px;
+    &:hover {
+      color: #fff;
+      background: red;
+    }
+  }
+  h1 {
+    line-height: 22px;
+    font-family: "Antonio";
+    font-weight: 500;
+    font-size: 40px;
+    color: #fff;
+  }
+}
+
+#content {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  #image {
+    width: 650px;
+    height: 650px;
+    border-radius: 50%;
+    align-self: center;
+  }
+  #text {
+    max-width: 500px;
+    align-self: center;
+  }
+}
