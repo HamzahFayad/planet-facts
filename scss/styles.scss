@@ -76,6 +76,7 @@ nav > ul {
   #text {
     max-width: 500px;
     align-self: center;
+    padding: 0 20px;
   }
   #planetName {
     text-transform: uppercase;
@@ -104,5 +105,56 @@ nav > ul {
     color: rgba(255, 255, 255, 0.76);
     padding-right: 10px;
     pointer-events: none;
+  }
+}
+
+@media only screen and(max-width: 1024px) {
+  nav > ul {
+    flex-flow: column wrap;
+    margin-bottom: 8%;
+    li {
+      line-height: 44px;
+      padding: 0 0;
+      text-align: center;
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+
+  #content {
+    flex-flow: column wrap;
+    padding: 0 20px;
+    #image {
+      width: 250px;
+      height: 250px;
+    }
+    #image-geology {
+      position: absolute;
+      background-size: 135px 160px;
+      background-repeat: no-repeat;
+      width: 200px;
+      height: 200px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      transform: translate(35px, -150px) rotate(0deg);
+    }
+    #text {
+      max-width: 40rem;
+    }
+    #planetName {
+      font-size: 35px;
+    }
+    #planetText1 {
+      padding: 4px 0;
+    }
+  }
+  #information {
+    h3 {
+      padding: 14px;
+      font-size: 14px;
+    }
   }
 }

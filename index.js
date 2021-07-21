@@ -292,9 +292,7 @@
         infLink[0].classList.add("active");
         infLink[i].classList.remove("active");
       }
-
       imageGeology.style.opacity = "0";
-
       document.querySelector(".los").style.opacity = "0";
       document.querySelector("#content").style.opacity = "1";
 
