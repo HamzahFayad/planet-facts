@@ -251,6 +251,15 @@
     },
   ];
 
+  let inf = document.querySelector("#information");
+  let infLink = document.querySelectorAll(".tabLink");
+  inf.addEventListener("click", (e) => {
+    for (let i = 0; i < infLink.length; i++) {
+      infLink[i].classList.remove("active");
+      e.target.classList.add("active");
+    }
+  });
+
   //el("name").innerHTML = data[0].name;
   let links = document.getElementsByTagName("li");
   let image = el("image");
@@ -278,14 +287,17 @@
   }
 
   for (let l = 0; l < links.length; l++) {
-    //links[l].classList.remove("xd");
-    links[l].addEventListener("click", (e) => {
+    links[l].addEventListener("click", () => {
+      for (let i = 0; i < infLink.length; i++) {
+        infLink[0].classList.add("active");
+        infLink[i].classList.remove("active");
+      }
+
       imageGeology.style.opacity = "0";
 
       document.querySelector(".los").style.opacity = "0";
       document.querySelector("#content").style.opacity = "1";
 
-      //e.target.classList.add("xd");
       image.style.backgroundImage = "url(" + data[l].images.planet + ")";
       image.style.backgroundRepeat = "no-repeat";
       image.style.backgroundPosition = "center";

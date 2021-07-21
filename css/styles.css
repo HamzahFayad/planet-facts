@@ -17,6 +17,10 @@ h1 {
   cursor: pointer;
 }
 
+.active {
+  background-color: red;
+}
+
 nav > ul {
   padding: 0;
   width: 100%;
@@ -83,19 +87,24 @@ nav > ul h1 {
   padding: 10px 0;
 }
 
+#information {
+  pointer-events: none;
+}
 #information h3 {
   cursor: pointer;
   text-transform: uppercase;
   border: 2px solid #fff;
   padding: 20px;
   font-size: 16px;
+  pointer-events: all;
 }
 #information h3:hover {
-  background: rgba(255, 255, 255, 0.199);
+  background: red;
 }
 #information span {
   color: rgba(255, 255, 255, 0.76);
   padding-right: 10px;
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
