@@ -254,24 +254,63 @@
   //el("name").innerHTML = data[0].name;
   let links = document.getElementsByTagName("li");
   let image = el("image");
+  let imageGeology = el("image-geology");
 
-  image.style.backgroundImage = "url(" + data[0].images.planet + ")";
+  let overview = document.querySelector("#overview");
+  let structure = document.querySelector("#structure");
+  let geology = document.querySelector("#geology");
+
+  /*image.style.backgroundImage = "url(" + data[0].images.planet + ")";
   image.style.backgroundRepeat = "no-repeat";
   image.style.backgroundPosition = "center";
   image.style.backgroundSize = "450px 450px";
+  el("planetName").innerHTML = data[0].name;*/
 
+  document.querySelector("#logo").addEventListener("click", () => {
+    document.querySelector(".los").style.opacity = "1";
+    document.querySelector("#content").style.opacity = "0";
+  });
+
+  //navigation names
   for (let l = 0; l < links.length; l++) {
     let linkName = data[l].name;
     links[l].innerHTML = linkName;
   }
+
   for (let l = 0; l < links.length; l++) {
     //links[l].classList.remove("xd");
     links[l].addEventListener("click", (e) => {
+      imageGeology.style.opacity = "0";
+
+      document.querySelector(".los").style.opacity = "0";
+      document.querySelector("#content").style.opacity = "1";
+
       //e.target.classList.add("xd");
       image.style.backgroundImage = "url(" + data[l].images.planet + ")";
       image.style.backgroundRepeat = "no-repeat";
       image.style.backgroundPosition = "center";
       image.style.backgroundSize = "450px 450px";
+      el("planetName").innerHTML = data[l].name;
+      el("planetText1").innerHTML = data[l].overview.content;
+
+      overview.addEventListener("click", () => {
+        el("planetText1").innerHTML = data[l].overview.content;
+        image.style.backgroundImage = "url(" + data[l].images.planet + ")";
+        imageGeology.style.opacity = "0";
+      });
+      structure.addEventListener("click", () => {
+        el("planetText1").innerHTML = data[l].structure.content;
+        image.style.backgroundImage = "url(" + data[l].images.internal + ")";
+        imageGeology.style.opacity = "0";
+      });
+      geology.addEventListener("click", () => {
+        el("planetText1").innerHTML = data[l].geology.content;
+        image.style.backgroundImage = "url(" + data[l].images.planet + ")";
+
+        imageGeology.style.backgroundImage =
+          "url(" + data[l].images.geology + ")";
+        imageGeology.style.opacity = "1";
+      });
     });
   }
 }

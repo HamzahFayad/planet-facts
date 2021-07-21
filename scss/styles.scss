@@ -8,9 +8,14 @@ html {
   font-family: "Spartan";
   box-sizing: border-box;
   background-color: hsl(240, 67%, 8%);
+  color: #fff;
   background-image: url("../assets/background-stars.svg"); //starry background
   background-position: center;
   background-repeat: repeat;
+}
+
+h1 {
+  cursor: pointer;
 }
 
 nav > ul {
@@ -47,14 +52,51 @@ nav > ul {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-evenly;
+  opacity: 0;
+  position: relative;
   #image {
     width: 650px;
     height: 650px;
     border-radius: 50%;
     align-self: center;
   }
+  #image-geology {
+    position: absolute;
+    background-size: 175px 200px;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-80px, 325px) rotate(-40deg);
+  }
   #text {
     max-width: 500px;
     align-self: center;
+  }
+  #planetName {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-family: "Antonio";
+  }
+  #planetText1 {
+    text-align: justify;
+    padding: 10px 0;
+  }
+}
+#information {
+  h3 {
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    padding: 20px;
+    font-size: 16px;
+    &:hover {
+      background: rgba(255, 255, 255, 0.199);
+    }
+  }
+  span {
+    color: rgba(255, 255, 255, 0.76);
+    padding-right: 10px;
   }
 }

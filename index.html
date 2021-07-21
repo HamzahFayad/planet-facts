@@ -11,7 +11,7 @@
     <main class="mainPage">
       <nav id="nav">
         <ul>
-          <h1>The Planets</h1>
+          <h1 id="logo">The Planets</h1>
           <li id="Mercury"></li>
           <li id="Venus"></li>
           <li id="Earth"></li>
@@ -22,15 +22,38 @@
           <li id="Neptun"></li>
         </ul>
       </nav>
+      <div class="los">
+        <a
+          href=""
+          style="
+            color: #fff;
+            position: absolute;
+            transform: translate(20%, 10%);
+            opacity: 1;
+          "
+          >LOS</a
+        >
+      </div>
       <div id="content">
         <div id="image"></div>
+        <div id="image-geology"></div>
         <div id="text">
-          <p style="background-color: #fff">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias,
-            omnis voluptatum ea quibusdam repellat, voluptatem consequuntur sint
-            distinctio voluptate quod maiores nostrum excepturi? Nobis quia
-            accusantium qui quos! Nemo, eos.
-          </p>
+          <h2 id="planetName"></h2>
+          <p id="planetText1"></p>
+          <div id="information">
+            <h3 id="overview">
+              <span>1</span>
+              Overview
+            </h3>
+            <h3 id="structure">
+              <span>2</span>
+              Structure
+            </h3>
+            <h3 id="geology">
+              <span>3</span>
+              Surfacegeology
+            </h3>
+          </div>
         </div>
       </div>
     </main>
