@@ -278,6 +278,7 @@
   document.querySelector("#logo").addEventListener("click", () => {
     document.querySelector(".los").style.opacity = "1";
     document.querySelector("#content").style.opacity = "0";
+    document.querySelector("#facts").style.opacity = "0";
   });
 
   //navigation names
@@ -295,6 +296,7 @@
       imageGeology.style.opacity = "0";
       document.querySelector(".los").style.opacity = "0";
       document.querySelector("#content").style.opacity = "1";
+      document.querySelector("#facts").style.opacity = "1";
 
       image.style.backgroundImage = "url(" + data[l].images.planet + ")";
       image.style.backgroundRepeat = "no-repeat";
@@ -302,6 +304,11 @@
       image.style.backgroundSize = "450px 450px";
       el("planetName").innerHTML = data[l].name;
       el("planetText1").innerHTML = data[l].overview.content;
+
+      el("rotation--time").innerHTML = data[l].rotation;
+      el("revolution--time").innerHTML = data[l].revolution;
+      el("radius").innerHTML = data[l].radius;
+      el("average--temp").innerHTML = data[l].temperature;
 
       overview.addEventListener("click", () => {
         el("planetText1").innerHTML = data[l].overview.content;

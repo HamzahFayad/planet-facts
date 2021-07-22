@@ -22,17 +22,24 @@
           <li id="Neptun"></li>
         </ul>
       </nav>
-      <div class="los">
-        <a
-          href=""
+      <div
+        class="los"
+        style="display: grid; place-items: center; position: relative"
+      >
+        <img
           style="
-            color: #fff;
+            max-width: 400px;
             position: absolute;
-            transform: translate(20%, 10%);
-            opacity: 1;
+            transform: translateY(300px);
           "
-          >LOS</a
-        >
+          src="./assets/moon.png"
+          alt="moon"
+        />
+        <img
+          class="astronaut"
+          src="./assets/astronaut.png"
+          alt="astronaut comic"
+        />
       </div>
       <div id="content">
         <div id="image"></div>
@@ -47,16 +54,40 @@
             </h3>
             <h3 id="structure" class="tabLink">
               <span>2</span>
-              Structure
+              Internal Structure
             </h3>
             <h3 id="geology" class="tabLink">
               <span>3</span>
-              Surfacegeology
+              Surface Geology
             </h3>
           </div>
         </div>
       </div>
+
+      <div id="facts">
+        <div id="facts__val">
+          <h4>rotation time</h4>
+          <span id="rotation--time"></span>
+        </div>
+        <div id="facts__val">
+          <h4>revolution time</h4>
+          <span id="revolution--time"></span>
+        </div>
+        <div id="facts__val">
+          <h4>radius</h4>
+          <span id="radius"></span>
+        </div>
+        <div id="facts__val">
+          <h4>average temp.</h4>
+          <span id="average--temp"></span>
+        </div>
+      </div>
     </main>
+    <footer style="text-align: center">
+      <p style="font-size: 12px">
+        Challenge by Frontend Mentor - Coded by Hamzah
+      </p>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>

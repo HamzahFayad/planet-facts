@@ -50,6 +50,31 @@ nav > ul h1 {
   color: #fff;
 }
 
+.astronaut {
+  filter: drop-shadow(5px 5px 5px #222);
+  max-width: 200px;
+  position: absolute;
+  transform: translate(0, 450px);
+  animation: float 5000ms ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0px, 450px);
+  }
+  25% {
+    transform: translate(0px, 400px);
+  }
+  50% {
+    transform: translate(-25px, 450px);
+  }
+  75% {
+    transform: translate(25px, 400px);
+  }
+  100% {
+    transform: translate(0px, 450px);
+  }
+}
 #content {
   display: flex;
   flex-flow: row nowrap;
@@ -108,6 +133,26 @@ nav > ul h1 {
   pointer-events: none;
 }
 
+#facts {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  opacity: 0;
+  margin-bottom: 6%;
+}
+#facts__val {
+  border: 1px solid #fff;
+  padding: 20px 40px;
+}
+#facts h4 {
+  text-transform: uppercase;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.76);
+}
+#facts span {
+  font-size: 20px;
+}
+
 @media only screen and (max-width: 1024px) {
   nav > ul {
     flex-flow: column wrap;
@@ -155,6 +200,29 @@ nav > ul h1 {
   #information h3 {
     padding: 14px;
     font-size: 14px;
+  }
+
+  #facts {
+    flex-flow: column wrap;
+    padding: 0 20px;
+    display: block;
+    margin: 6% auto;
+  }
+  #facts__val {
+    border: 1px solid #fff;
+    padding: 10px 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+  #facts h4 {
+    font-size: 14px;
+    padding: 0 20px;
+  }
+  #facts span {
+    font-size: 16px;
+    align-self: center;
+    padding: 0 20px;
   }
 }
 
