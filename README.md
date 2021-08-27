@@ -1,6 +1,6 @@
 # planet-facts
 
-![Design preview for the Clock app coding challenge](/assets/planet-earth.svg)
+![](/assets/planet-earth.svg | width=200)
 
 The users should be able to:
 
