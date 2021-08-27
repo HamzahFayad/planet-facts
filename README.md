@@ -1,6 +1,6 @@
 # planet-facts
 
-![](/assets/planet-earth.svg | width=200)
+![](/assets/planet-earth.svg)
 
 The users should be able to:
 
